@@ -1,0 +1,108 @@
+@import "../../quiz.component.scss";
+#bar {
+    background: linear-gradient(145deg,$quiz-bar-color1,$quiz-bar-color2);
+    border-radius: 1rem;
+    width: 100%;
+    height: $quiz-bar-size;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    grid-template-rows: 1;
+    align-items: center;
+}
+#bar.dark-mode {
+    background: linear-gradient(145deg,$quiz-bar-color1-dark,$quiz-bar-color2-dark);
+}
+
+#bar .name, #bar .score, #bar ul {
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+}
+
+#bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#bar {
+    ul {
+        li {
+            display: inline-block;
+            margin: 0 3%;
+            position: relative;
+            font-size: 1.5rem;
+            text-align: center;
+            cursor: default;
+            user-select: none;
+        
+            #settings {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: 0px;
+                left: 0px;
+                transform: translate3d(-85%, 20%, 0px);
+                will-change: transform;
+                width: 12rem;
+                float: left;
+                min-width: 10rem;
+                padding: 1rem;
+                margin: .125rem 0 0;
+                font-size: 0.8rem;
+                text-transform: none;
+                color: #b6c3cf;
+                text-align: left;
+                list-style: none;
+                background-color: hsl(211, 49%, 23%);
+                background-clip: padding-box;
+                border: 1px solid rgba(0,0,0,.15);
+                border-radius: .25rem;
+                z-index: 1000;
+            }
+        }
+    }
+}
+
+
+.bar-btn{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+.bar-btn:hover{
+    border-radius: 10px;
+    background-color: rgba(167, 199, 241, 0.212);
+}
+
+.name {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 5%;
+    cursor: default;
+    user-select: none;
+}
+
+#bar .score {
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: default;
+    user-select: none;
+}
+
+svg {
+    color: white;
+    transform: scale(2);
+    text-align: center;
+}
+
+svg:hover {
+    transform: scale(2.2);
+    cursor: pointer;
+}
+
+

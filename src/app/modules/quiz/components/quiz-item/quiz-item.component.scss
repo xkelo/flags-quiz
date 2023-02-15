@@ -1,0 +1,114 @@
+@import "../../quiz.component.scss";
+
+.test-item {
+    width: $quiz-item-size;
+    height:  $quiz-item-size;
+    background-color: $quiz-list-item-background-color;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border-radius: 4%;
+    box-shadow: 0 0 0.5rem hsl(192, 3%, 34%);
+    scroll-snap-align: start end;
+
+    input:disabled {
+        color: $quiz-answer-color;
+    }
+}
+.test-item.dark-mode {
+    background-color: $quiz-list-item-background-color-dark;
+    color: hsl(0, 0%, 86%);
+
+    input:disabled {
+        color: $quiz-answer-color-dark;
+    }
+    .mat-focused mat-label {
+       color: hsl(231, 92%, 28%);
+    }
+}
+
+.image-holder {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-image {
+    margin: auto;
+    max-height: 90%;
+    max-width: 90%;
+} 
+.answer-holder {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: 50%;
+}
+
+mat-form-field {
+    width: 100%;
+    height: auto;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.country-name {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.capital{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.button-globe {
+    grid-column: 2;
+    grid-row: 3;
+    width: 30%;
+    height: 38px;
+    padding: 6px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    background-color: $quiz-globe-button-color;
+    color: #fff;
+    border-radius: 0.25rem;
+}
+
+.button-globe.dark-mode {
+    background-color: $quiz-globe-button-color-dark;
+}
+
+.button-globe:hover {
+    transition:  background-color .15s ease-in-out;
+    background-color: hsl(224, 68%, 32%);
+}
+
+.globe-icon { 
+    height: 100%;
+    vertical-align: middle;
+    transform: scale(2);  
+}
+
+.map-answered {
+    background-color: $quiz-answer-color;
+    cursor: auto;
+}
+
+.map-answered:hover {
+    background-color: $quiz-answer-color;
+}
+
+.map-incorrect {
+    background-color: $quiz-incorrect-color;
+    cursor: auto;
+}
+
+.map-incorrect:hover {
+    background-color: $quiz-incorrect-color;
+}
